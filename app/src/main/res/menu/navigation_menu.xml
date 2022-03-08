@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/profile"
+        android:title="@string/profile" />
+    <item
+        android:id="@+id/labTest"
+        android:title="@string/my_lab_test_request" />
+    <item
+        android:id="@+id/myReview"
+        android:title="@string/my_review" />
+    <item
+        android:id="@+id/myWallet"
+        android:title="@string/my_wallet" />
+    <item
+        android:id="@+id/accountSetting"
+        android:title="@string/Account_setting" />
+
+    <item
+        android:id="@+id/logout"
+        android:title="@string/logout" />
+</menu>

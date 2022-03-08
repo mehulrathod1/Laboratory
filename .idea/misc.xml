@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/drawable-v24/back_button_bg.xml" value="0.2203125" />
+        <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/drawable-v24/edt_bg.xml" value="0.2203125" />
+        <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/drawable-v24/profile_edt_bg.xml" value="0.2203125" />
+        <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/drawable/button_bg.xml" value="0.2203125" />
+        <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/layout/activity_account_setting.xml" value="0.20416666666666666" />
+        <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/layout/activity_pprifle_setting.xml" value="0.19010416666666666" />
+        <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/layout/activity_profile_setting.xml" value="0.20416666666666666" />
+        <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/layout/activity_sign_up.xml" value="0.20416666666666666" />
+        <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/layout/activity_splash.xml" value="0.20416666666666666" />
+        <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/layout/content_profile_setting.xml" value="0.20416666666666666" />
+        <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/layout/fragment_first.xml" value="0.20416666666666666" />
+        <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/layout/fragment_request_completed.xml" value="0.20416666666666666" />
+        <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/layout/fragment_request_upcoming.xml" value="0.20416666666666666" />
+        <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/layout/fragment_second.xml" value="0.20416666666666666" />
+        <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/layout/navigation_header.xml" value="0.20416666666666666" />
+        <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/layout/nev_toolbar.xml" value="0.20416666666666666" />
+        <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/layout/toolbar.xml" value="0.20416666666666666" />
+        <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/menu/bottom_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/menu/menu.xml" value="0.20416666666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
