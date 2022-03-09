@@ -22,131 +22,188 @@
                 layout="@layout/nev_toolbar" />
         </RelativeLayout>
 
-        <RelativeLayout
 
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/ans"
-            android:background="@color/md_grey">
+            >
 
-            <LinearLayout
+            <RelativeLayout
+
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
+                android:layout_height="match_parent"
+                android:background="@color/md_grey">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/_12sdp"
-                    android:layout_marginTop="@dimen/_14sdp"
-                    android:layout_marginRight="@dimen/_12sdp"
-                    android:background="@color/md_grey"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
 
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@color/white"
-                        android:orientation="vertical">
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="@dimen/_200sdp"
-                            app:cardCornerRadius="@dimen/_8sdp">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="@dimen/_36sdp"
-                                    android:background="@color/action_mode_color"
-                                    android:fontFamily="@font/montserrat_semi_bold"
-                                    android:gravity="center"
-                                    android:text="@string/Revenue"
-                                    android:textColor="@color/white"
-                                    android:textSize="@dimen/_14sdp" />
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="@dimen/_40sdp"
-                                    android:fontFamily="@font/montserrat_semi_bold"
-                                    android:gravity="center"
-                                    android:text="@string/Net_Worth"
-                                    android:textSize="@dimen/_18sdp" />
-
-                                <TextView
-                                    android:id="@+id/completedRevenue"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="@dimen/_40sdp"
-                                    android:fontFamily="@font/montserrat_semi_bold"
-                                    android:gravity="center"
-                                    android:text="₹ 5000.00"
-                                    android:textColor="@color/action_mode_color"
-                                    android:textSize="@dimen/_30sdp" />
-                            </LinearLayout>
-
-                        </androidx.cardview.widget.CardView>
-
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_16sdp"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:layout_marginRight="@dimen/_12sdp"
                         android:background="@color/md_grey"
                         android:orientation="vertical">
 
-                        <Button
+
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/montserrat_semi_bold"
-                            android:text="@string/lab_request"
-                            android:textAllCaps="false"
-                            android:clickable="false"
-                            android:textSize="@dimen/_14sdp" />
+                            android:background="@color/white"
+                            android:orientation="vertical">
 
-                    </LinearLayout>
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_200sdp"
+                                app:cardCornerRadius="@dimen/_8sdp">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_16sdp"
-                        android:background="@color/white"
-                        android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
 
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_36sdp"
+                                        android:background="@color/action_mode_color"
+                                        android:fontFamily="@font/montserrat_semi_bold"
+                                        android:gravity="center"
+                                        android:text="@string/Revenue"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_14sdp" />
 
-                        <com.google.android.material.tabs.TabLayout
-                            android:id="@+id/tab"
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_40sdp"
+                                        android:fontFamily="@font/montserrat_semi_bold"
+                                        android:gravity="center"
+                                        android:text="@string/Net_Worth"
+                                        android:textSize="@dimen/_18sdp" />
+
+                                    <TextView
+                                        android:id="@+id/completedRevenue"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_40sdp"
+                                        android:fontFamily="@font/montserrat_semi_bold"
+                                        android:gravity="center"
+                                        android:text="₹ 5000.00"
+                                        android:textColor="@color/action_mode_color"
+                                        android:textSize="@dimen/_30sdp" />
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/toolbar"
-                            android:layout_marginLeft="@dimen/_16sdp"
-                            android:layout_marginRight="@dimen/_16sdp"
-                            app:tabMode="fixed"
-                            app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+                            android:layout_marginTop="@dimen/_16sdp"
+                            android:background="@color/md_grey"
+                            android:orientation="vertical">
 
-                        <androidx.viewpager.widget.ViewPager
-                            android:id="@+id/pager"
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="false"
+                                android:fontFamily="@font/montserrat_semi_bold"
+                                android:text="@string/lab_request"
+                                android:textAllCaps="false"
+                                android:textSize="@dimen/_14sdp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="@dimen/_200sdp"
-                            android:background="@color/md_grey" />
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_16sdp"
+                            android:background="@color/white"
+                            android:orientation="vertical">
+
+
+                            <com.google.android.material.tabs.TabLayout
+                                android:id="@+id/tab"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/toolbar"
+                                android:layout_marginLeft="@dimen/_16sdp"
+                                android:layout_marginRight="@dimen/_16sdp"
+                                app:tabMode="fixed"
+                                app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+
+                            <androidx.viewpager.widget.ViewPager
+                                android:id="@+id/pager"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_160sdp"
+                                android:background="@color/md_grey" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_16sdp"
+                            android:background="@color/md_grey"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="false"
+                                android:fontFamily="@font/montserrat_semi_bold"
+                                android:text="@string/review"
+                                android:textAllCaps="false"
+                                android:textSize="@dimen/_14sdp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_16sdp"
+                            android:orientation="vertical">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/reviewRecycler"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_16sdp"
+                            android:background="@color/md_grey"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/viewAllReview"
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_16sdp"
+                                android:layout_marginBottom="@dimen/_16sdp"
+                                android:fontFamily="@font/montserrat_semi_bold"
+                                android:text="View All"
+                                android:textAllCaps="false"
+                                android:textSize="@dimen/_14sdp" />
+                        </LinearLayout>
+
 
                     </LinearLayout>
-
 
                 </LinearLayout>
 
-            </LinearLayout>
+            </RelativeLayout>
 
-        </RelativeLayout>
-
-
+        </ScrollView>
     </RelativeLayout>
 
     <com.google.android.material.navigation.NavigationView
