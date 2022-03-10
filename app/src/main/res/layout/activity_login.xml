@@ -199,6 +199,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/_8sdp"
                 android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
                 android:layout_marginRight="@dimen/_8sdp">
 
                 <Button
@@ -212,34 +213,6 @@
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/_8sdp"
-                android:layout_marginTop="@dimen/_34sdp"
-                android:layout_marginRight="@dimen/_8sdp"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/_14sdp"
-                    android:gravity="center">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Don't have an DCP account ? "
-                        android:textColor="#515151" />
-
-                    <TextView
-                        android:id="@+id/txtSignUp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/Sign_up"
-                        android:textColor="@color/action_mode_color_300" />
-                </LinearLayout>
-            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 

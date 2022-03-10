@@ -1,63 +1,134 @@
 package com.in.lab.model;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class TestRequestModel {
 
-    String BookingId,patientName,datOfBooking,labTestName,labTestResult,amount;
 
-    public TestRequestModel(String bookingId, String patientName, String datOfBooking, String labTestName, String labTestResult, String amount) {
-        BookingId = bookingId;
-        this.patientName = patientName;
-        this.datOfBooking = datOfBooking;
-        this.labTestName = labTestName;
-        this.labTestResult = labTestResult;
-        this.amount = amount;
+    @SerializedName("status")
+    @Expose
+    boolean status;
+
+    @SerializedName("message")
+    @Expose
+    String message;
+
+    @SerializedName("data")
+    List<TestRequestData> testRequestData = new ArrayList<>();
+
+    public boolean isStatus() {
+        return status;
     }
 
-    public String getBookingId() {
-        return BookingId;
+    public void setStatus(boolean status) {
+        this.status = status;
     }
 
-    public void setBookingId(String bookingId) {
-        BookingId = bookingId;
+    public String getMessage() {
+        return message;
     }
 
-    public String getPatientName() {
-        return patientName;
+    public void setMessage(String message) {
+        this.message = message;
     }
 
-    public void setPatientName(String patientName) {
-        this.patientName = patientName;
+    public List<TestRequestData> getTestRequestData() {
+        return testRequestData;
     }
 
-    public String getDatOfBooking() {
-        return datOfBooking;
+    public void setTestRequestData(List<TestRequestData> testRequestData) {
+        this.testRequestData = testRequestData;
     }
 
-    public void setDatOfBooking(String datOfBooking) {
-        this.datOfBooking = datOfBooking;
-    }
+    public static class TestRequestData {
 
-    public String getLabTestName() {
-        return labTestName;
-    }
+        @SerializedName("booking_id")
+        @Expose
+        String booking_id;
 
-    public void setLabTestName(String labTestName) {
-        this.labTestName = labTestName;
-    }
 
-    public String getLabTestResult() {
-        return labTestResult;
-    }
+        @SerializedName("booking_date")
+        @Expose
+        String booking_date;
 
-    public void setLabTestResult(String labTestResult) {
-        this.labTestResult = labTestResult;
-    }
 
-    public String getAmount() {
-        return amount;
-    }
+        @SerializedName("patient_name")
+        @Expose
+        String patient_name;
 
-    public void setAmount(String amount) {
-        this.amount = amount;
+
+        @SerializedName("last_test_name")
+        @Expose
+        String last_test_name;
+
+
+        @SerializedName("last_test_result")
+        @Expose
+        String last_test_result;
+
+        @SerializedName("ammount")
+        @Expose
+        String amount;
+
+        public TestRequestData(String booking_id, String booking_date, String patient_name, String last_test_name, String last_test_result, String amount) {
+            this.booking_id = booking_id;
+            this.booking_date = booking_date;
+            this.patient_name = patient_name;
+            this.last_test_name = last_test_name;
+            this.last_test_result = last_test_result;
+            this.amount = amount;
+        }
+
+        public String getBooking_id() {
+            return booking_id;
+        }
+
+        public void setBooking_id(String booking_id) {
+            this.booking_id = booking_id;
+        }
+
+        public String getBooking_date() {
+            return booking_date;
+        }
+
+        public void setBooking_date(String booking_date) {
+            this.booking_date = booking_date;
+        }
+
+        public String getPatient_name() {
+            return patient_name;
+        }
+
+        public void setPatient_name(String patient_name) {
+            this.patient_name = patient_name;
+        }
+
+        public String getLast_test_name() {
+            return last_test_name;
+        }
+
+        public void setLast_test_name(String last_test_name) {
+            this.last_test_name = last_test_name;
+        }
+
+        public String getLast_test_result() {
+            return last_test_result;
+        }
+
+        public void setLast_test_result(String last_test_result) {
+            this.last_test_result = last_test_result;
+        }
+
+        public String getAmount() {
+            return amount;
+        }
+
+        public void setAmount(String amount) {
+            this.amount = amount;
+        }
     }
 }

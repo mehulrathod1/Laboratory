@@ -16,10 +16,11 @@ import java.util.List;
 
 
 public class TransactionHistoryAdapter extends RecyclerView.Adapter<TransactionHistoryAdapter.ViewHolder> {
-    List<TransactionHistoryModel> list;
+    List<TransactionHistoryModel.TransactionHistoryData> list;
     Context context;
 
-    public TransactionHistoryAdapter(List<TransactionHistoryModel> list, Context context) {
+
+    public TransactionHistoryAdapter(List<TransactionHistoryModel.TransactionHistoryData> list, Context context) {
         this.list = list;
         this.context = context;
     }
@@ -35,11 +36,11 @@ public class TransactionHistoryAdapter extends RecyclerView.Adapter<TransactionH
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        TransactionHistoryModel model = list.get(position);
-        holder.TransactionId.setText(model.getTransactionId());
-        holder.TransactionDate.setText(model.getTransactionDate());
-        holder.OrderId.setText(model.getOrderId());
-        holder.TransactionAmount.setText(model.getTransactionAmount());
+        TransactionHistoryModel.TransactionHistoryData model = list.get(position);
+        holder.TransactionId.setText(model.getId());
+        holder.TransactionDate.setText(model.getTxn_date());
+        holder.OrderId.setText(model.getId());
+        holder.TransactionAmount.setText(model.getAmount());
 
     }
 

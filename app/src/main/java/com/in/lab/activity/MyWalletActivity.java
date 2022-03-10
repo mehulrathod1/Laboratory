@@ -11,11 +11,19 @@ import android.widget.TextView;
 import com.google.android.material.tabs.TabLayout;
 import com.in.lab.R;
 import com.in.lab.adapter.MyWalletTabAdapter;
+import com.in.lab.model.MyWalletModel;
+import com.in.lab.services.Api;
+import com.in.lab.services.Global;
+import com.in.lab.services.RetrofitClient;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MyWalletActivity extends AppCompatActivity {
 
     ImageView back;
-    TextView headerTitle;
+    TextView headerTitle, myBalance;
 
 
     TabLayout tabLayout;
@@ -29,13 +37,15 @@ public class MyWalletActivity extends AppCompatActivity {
 
         init();
         clickEvent();
+        getWalletBalance(Global.token, Global.userId);
     }
 
     public void init() {
 
+        Global.progressDialog(this);
         back = findViewById(R.id.Back);
         headerTitle = findViewById(R.id.header_title);
-
+        myBalance = findViewById(R.id.myBalance);
         headerTitle.setText("My Wallet");
 
         tabLayout = findViewById(R.id.tabb);
@@ -74,6 +84,32 @@ public class MyWalletActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 finish();
+            }
+        });
+    }
+
+    public void getWalletBalance(String token, String user_id) {
+
+        Api call = RetrofitClient.getClient(Global.baseUrl).create(Api.class);
+        Global.dialog.show();
+
+
+        call.myWalletBalance(token, user_id).enqueue(new Callback<MyWalletModel>() {
+            @Override
+            public void onResponse(Call<MyWalletModel> call, Response<MyWalletModel> response) {
+
+
+                MyWalletModel myWalletModel = response.body();
+                myBalance.setText("₹ " +myWalletModel.getData().getWallet_balance());
+                Global.dialog.dismiss();
+
+
+            }
+
+            @Override
+            public void onFailure(Call<MyWalletModel> call, Throwable t) {
+                Global.dialog.dismiss();
+
             }
         });
     }

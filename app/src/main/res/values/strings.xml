@@ -2,8 +2,11 @@
     <string name="app_name">Lab</string>
 
 
-    <!--    Sign up-->
 
+
+
+    <!--    Sign up-->
+    <string name="rupee">₹</string>
     <string name="dcp">DCP</string>
     <string name="Sign_up">Sign Up</string>
     <string name="new_dcp">New to DCP ? Please Provide your details!!!</string>
@@ -56,6 +59,8 @@
     <string name="last_name">Lastname</string>
     <string name="address">Address</string>
     <string name="submit">Submit</string>
+    <string name="Update_Photo">Update Photo</string>
+    <string name="Choose_new_photo">Choose new photo</string>
 
 
     <!--    account_setting-->

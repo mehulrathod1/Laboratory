@@ -15,7 +15,7 @@ import com.in.lab.model.TestRequestModel;
 import java.util.List;
 
 public class TestRequestAdapter extends RecyclerView.Adapter<TestRequestAdapter.ViewHolder> {
-    List<TestRequestModel> list;
+    List<TestRequestModel.TestRequestData> list;
     Context context;
     Click click;
 
@@ -24,7 +24,7 @@ public class TestRequestAdapter extends RecyclerView.Adapter<TestRequestAdapter.
         void onItemClick(int position);
     }
 
-    public TestRequestAdapter(List<TestRequestModel> list, Context context, Click click) {
+    public TestRequestAdapter(List<TestRequestModel.TestRequestData> list, Context context, Click click) {
         this.list = list;
         this.context = context;
         this.click = click;
@@ -41,13 +41,13 @@ public class TestRequestAdapter extends RecyclerView.Adapter<TestRequestAdapter.
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        TestRequestModel model = list.get(position);
+        TestRequestModel.TestRequestData model = list.get(position);
 
-        holder.BookingId.setText(model.getBookingId());
-        holder.patientName.setText(model.getPatientName());
-        holder.dateOfBooking.setText(model.getDatOfBooking());
-        holder.labTestName.setText(model.getLabTestName());
-        holder.labTestResult.setText(model.getLabTestResult());
+        holder.BookingId.setText(model.getBooking_id());
+        holder.patientName.setText(model.getPatient_name());
+        holder.dateOfBooking.setText(model.getBooking_date());
+        holder.labTestName.setText(model.getLast_test_name());
+        holder.labTestResult.setText(model.getLast_test_result());
         holder.amount.setText(model.getAmount());
 
 

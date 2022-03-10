@@ -9,6 +9,7 @@
         <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/drawable/button_bg.xml" value="0.2203125" />
         <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/drawable/ic_baseline_star_24.xml" value="0.2203125" />
         <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/layout/activity_account_setting.xml" value="0.20416666666666666" />
+        <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/layout/activity_authentication.xml" value="0.20416666666666666" />
         <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
         <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/layout/activity_my_review.xml" value="0.20416666666666666" />
@@ -20,6 +21,7 @@
         <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/layout/activity_test_request.xml" value="0.20416666666666666" />
         <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/layout/content_profile_setting.xml" value="0.20416666666666666" />
         <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/layout/fragment_first.xml" value="0.20416666666666666" />
+        <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/layout/fragment_redemption.xml" value="0.20416666666666666" />
         <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/layout/fragment_request_completed.xml" value="0.20416666666666666" />
         <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/layout/fragment_request_upcoming.xml" value="0.20416666666666666" />
         <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/layout/fragment_second.xml" value="0.20416666666666666" />
@@ -31,7 +33,7 @@
         <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/layout/navigation_header.xml" value="0.20416666666666666" />
         <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/layout/nev_toolbar.xml" value="0.20416666666666666" />
         <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/layout/toolbar.xml" value="0.20416666666666666" />
-        <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/layout/transaction_history_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/layout/transaction_history_item.xml" value="0.33" />
         <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/menu/bottom_menu.xml" value="0.20416666666666666" />
         <entry key="..\:/NotionInfosoftProject/Lab/app/src/main/res/menu/menu.xml" value="0.20416666666666666" />
       </map>

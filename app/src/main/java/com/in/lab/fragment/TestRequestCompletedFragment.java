@@ -15,16 +15,23 @@ import com.in.lab.R;
 import com.in.lab.adapter.TestRequestAdapter;
 import com.in.lab.adapter.TestRequestTabAdapter;
 import com.in.lab.model.TestRequestModel;
+import com.in.lab.services.Api;
+import com.in.lab.services.Global;
+import com.in.lab.services.RetrofitClient;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class TestRequestCompletedFragment extends Fragment {
 
     View view;
     RecyclerView testCompletedRecycler;
     TestRequestAdapter testRequestTabAdapter;
-    List<TestRequestModel> requestList = new ArrayList<>();
+    List<TestRequestModel.TestRequestData> requestList = new ArrayList<>();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -37,7 +44,7 @@ public class TestRequestCompletedFragment extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_test_request_completed, container, false);
         init();
-        requestData();
+        getUpcomingTest(Global.token,Global.userId);
         return view;
 
     }
@@ -47,19 +54,40 @@ public class TestRequestCompletedFragment extends Fragment {
         testCompletedRecycler = view.findViewById(R.id.testCompletedRecycler);
     }
 
+    public void getUpcomingTest(String token, String user_id) {
+
+        Api call = RetrofitClient.getClient(Global.baseUrl).create(Api.class);
+
+        call.getUpcomingTest(token, user_id).enqueue(new Callback<TestRequestModel>() {
+            @Override
+            public void onResponse(Call<TestRequestModel> call, Response<TestRequestModel> response) {
+
+                TestRequestModel testRequestModel = response.body();
+
+                List<TestRequestModel.TestRequestData> dataList = testRequestModel.getTestRequestData();
+                for (int i = 0; i < dataList.size(); i++) {
+
+                    TestRequestModel.TestRequestData model = dataList.get(i);
+
+                    TestRequestModel.TestRequestData data = new TestRequestModel.TestRequestData(
+                            model.getBooking_id(), model.getBooking_date(), model.getPatient_name(),
+                            model.getLast_test_name(), model.getLast_test_result(), model.getAmount()
+                    );
+
+                    requestList.add(data);
+                }
+
+                requestData();
+            }
+
+            @Override
+            public void onFailure(Call<TestRequestModel> call, Throwable t) {
+
+            }
+        });
+    }
+
     public void requestData() {
-
-        TestRequestModel model = new TestRequestModel("123456789", "Test Patient",
-                "09-03-2022", "Test Test", "Result", "199");
-
-        requestList.add(model);
-        requestList.add(model);
-        requestList.add(model);
-        requestList.add(model);
-        requestList.add(model);
-        requestList.add(model);
-        requestList.add(model);
-        requestList.add(model);
 
 
         testRequestTabAdapter = new TestRequestAdapter(requestList, getContext(), new TestRequestAdapter.Click() {
