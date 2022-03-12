@@ -37,7 +37,7 @@ public class TransactionHistoryAdapter extends RecyclerView.Adapter<TransactionH
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
         TransactionHistoryModel.TransactionHistoryData model = list.get(position);
-        holder.TransactionId.setText(model.getId());
+        holder.TransactionId.setText(model.getTxn_id());
         holder.TransactionDate.setText(model.getTxn_date());
         holder.OrderId.setText(model.getId());
         holder.TransactionAmount.setText(model.getAmount());

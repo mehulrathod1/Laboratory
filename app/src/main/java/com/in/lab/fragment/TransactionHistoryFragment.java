@@ -94,4 +94,6 @@ public class TransactionHistoryFragment extends Fragment {
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setAdapter(adapter);
     }
+
+
 }
